@@ -30,4 +30,14 @@ $('train-input').on("click", function(event){
     var destination = $('destination-input').val().trim();
     var freq = $('freq-input').val().trim();
     var firstTrainTime = $('FTT-input').val().trim();
+
+    //creates a local temp object for holding user input info
+    var userInput = {
+        train: train,
+        destination: destination,
+        frequency: freq,
+        firstTrainTime = FTT
+    };
+
+    
 })
