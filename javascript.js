@@ -7,8 +7,7 @@
 
 <script src="/__/firebase/init.js"></script>
 
-<script>
-var firebaseConfig = {
+    var firebaseConfig = {
     apiKey: "AIzaSyAVD7LjAlxiisN6OHobVpuvNjoYMy5wQOM",
     authDomain: "train-schedule-82d22.firebaseapp.com",
     databaseURL: "https://train-schedule-82d22.firebaseio.com",
@@ -19,4 +18,8 @@ var firebaseConfig = {
   };
 
 firebase.initializeApp(firebaseConfig);
-</script>
+
+var database = firesbase.database();
+
+// button to add trains to schedule
+
