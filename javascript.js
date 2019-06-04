@@ -39,5 +39,8 @@ $('train-input').on("click", function(event){
         firstTrainTime = FTT
     };
 
+    // uploads user input to database
+    database.ref().push(userInput);
+
     
 })
