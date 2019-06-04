@@ -23,3 +23,6 @@ var database = firesbase.database();
 
 // button to add trains to schedule
 
+$('train-input').on("click", function(event){
+    event.preventDefault();
+})
