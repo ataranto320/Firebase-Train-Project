@@ -50,5 +50,10 @@ $('train-input').on("click", function(event){
 
     alert("User Input Added");
 
-    
-})
+    //clear text boxes
+    $('train-input').val("");
+    $('destination-input').val("");
+    $('freq-input').val("");
+    $('FTT-input').val("");
+});
+
