@@ -22,7 +22,12 @@ firebase.initializeApp(firebaseConfig);
 var database = firesbase.database();
 
 // button to add trains to schedule
-
 $('train-input').on("click", function(event){
     event.preventDefault();
+
+    // grab user input
+    var train = $('train-input').val().trim();
+    var destination = $('destination-input').val().trim();
+    var freq = $('freq-input').val().trim();
+    var firstTrainTime = $('FTT-input').val().trim();
 })
