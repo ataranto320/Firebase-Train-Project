@@ -42,5 +42,13 @@ $('train-input').on("click", function(event){
     // uploads user input to database
     database.ref().push(userInput);
 
+    //console log
+    console.log(userInput.train);
+    console.log(userInput.destination);
+    console.log(userInput.freq);
+    console.log(userInput.FTT);
+
+    alert("User Input Added");
+
     
 })
