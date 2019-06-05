@@ -21,11 +21,11 @@ firebase.initializeApp(firebaseConfig);
 
 var database = firesbase.database();
 
-// button to add trains to schedule
+//button to add trains to schedule
 $('train-input').on("click", function(event){
     event.preventDefault();
 
-    // grab user input
+    //grab user input
     var train = $('train-input').val().trim();
     var destination = $('destination-input').val().trim();
     var freq = $('freq-input').val().trim();
@@ -39,7 +39,7 @@ $('train-input').on("click", function(event){
         firstTrainTime = FTT
     };
 
-    // uploads user input to database
+    //uploads user input to database
     database.ref().push(userInput);
 
     //console log
@@ -57,3 +57,10 @@ $('train-input').on("click", function(event){
     $('FTT-input').val("");
 });
 
+//create firebase event for user input to database and add a row in html from user's entry
+database.ref().on("child_added", function(addChild){
+    console.log(addChild.val());
+
+    //store into variables
+    
+})
