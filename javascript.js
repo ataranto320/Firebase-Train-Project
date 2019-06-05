@@ -4,7 +4,6 @@
 
 // firebase
 
-
     var firebaseConfig = {
     apiKey: "AIzaSyAVD7LjAlxiisN6OHobVpuvNjoYMy5wQOM",
     authDomain: "train-schedule-82d22.firebaseapp.com",
@@ -37,8 +36,8 @@ $('train-input').on("click", function(event){
         destination: destination,
         frequency: freq,
         // firstTrainTime = FTT,
-        nextArrival = NA,
-        minutesAway = MA
+        nextArrival: NA,
+        minutesAway: MA
     };
 
     //uploads user input to database
