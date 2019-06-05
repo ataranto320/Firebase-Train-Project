@@ -31,13 +31,17 @@ $('train-input').on("click", function(event){
     var destination = $('destination-input').val().trim();
     var freq = $('freq-input').val().trim();
     var firstTrainTime = $('FTT-input').val().trim();
+    var nextArrival = $('NA-input').val().trim();
+    var minutesAway = $('MA-input').val().trim();
 
     //creates a local temp object for holding user input info
     var userInput = {
         train: train,
         destination: destination,
         frequency: freq,
-        firstTrainTime = FTT
+        firstTrainTime = FTT,
+        nextArrival = NA,
+        minutesAway = MA
     };
 
     //uploads user input to database
@@ -78,8 +82,8 @@ database.ref().on("child_added", function(addChild){
     // var FTTPretty = moment.unix(FTT).format("HH/mm");
 
     // Calculate the frequency of trains using hardcore math to calculate the frequency of them coming into the station
-    var freq = moment().diff(moment(freq, "X"), "mins");
-    console.log(freq);
+    // var freq = moment().diff(moment(freq, "X"), "mins");
+    // console.log(freq);
 
     //calculate next arrival and minutes away
     //arrival time - current time = mins left?
