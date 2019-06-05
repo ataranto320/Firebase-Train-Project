@@ -62,5 +62,10 @@ database.ref().on("child_added", function(addChild){
     console.log(addChild.val());
 
     //store into variables
+    var train = addChild.val().train;
+    var destination = addChild.val().destination;
+    var freq = addChild.val().frequency;
+    var FTT = addVhild.val().firstTrainTime;
+
     
 })
