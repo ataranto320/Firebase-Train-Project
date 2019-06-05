@@ -91,4 +91,7 @@ database.ref().on("child_added", function(addChild){
         // $('td').text(nextArrival),
         // $('td').text(minutesAway)
     );
-})
+
+    //append new row to table
+    $("#train-table > tbody").append(newRow);
+});
