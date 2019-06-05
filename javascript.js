@@ -4,7 +4,7 @@
 
 // firebase
 <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
-{/* <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script> */}
+<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
 
 <script src="/__/firebase/init.js"></script>
 
@@ -106,5 +106,5 @@ database.ref().on("child_added", function(addChild){
     );
 
     //append new row to table
-    $("#train-table > tbody").append(newRow);
+    $("tbody").append(newRow);
 });
