@@ -80,5 +80,15 @@ database.ref().on("child_added", function(addChild){
     var freq = moment().diff(moment(freq, "X"), "mins");
     console.log(freq);
 
-    
+    //calculate next arrival and minutes away
+    //arrival time - current time = mins left?
+
+    //create a new row
+    var newRow = $('tr').append(
+        $('td').text(train),
+        $('td').text(destination),
+        $('td').text(freq),
+        // $('td').text(nextArrival),
+        // $('td').text(minutesAway)
+    );
 })
