@@ -30,7 +30,7 @@ $('train-input').on("click", function(event){
     var train = $('train-input').val().trim();
     var destination = $('destination-input').val().trim();
     var freq = $('freq-input').val().trim();
-    var firstTrainTime = $('FTT-input').val().trim();
+    // var firstTrainTime = $('FTT-input').val().trim();
     var nextArrival = $('NA-input').val().trim();
     var minutesAway = $('MA-input').val().trim();
 
@@ -39,7 +39,7 @@ $('train-input').on("click", function(event){
         train: train,
         destination: destination,
         frequency: freq,
-        firstTrainTime = FTT,
+        // firstTrainTime = FTT,
         nextArrival = NA,
         minutesAway = MA
     };
@@ -51,7 +51,9 @@ $('train-input').on("click", function(event){
     console.log(userInput.train);
     console.log(userInput.destination);
     console.log(userInput.freq);
-    console.log(userInput.FTT);
+    // console.log(userInput.FTT);
+    console.log(userInput.NA);
+    console.log(userInput.MA);
 
     alert("User Input Added");
 
@@ -59,7 +61,9 @@ $('train-input').on("click", function(event){
     $('train-input').val("");
     $('destination-input').val("");
     $('freq-input').val("");
-    $('FTT-input').val("");
+    // $('FTT-input').val("");
+    $('NA-input').val("");
+    $('MA-input').val("");
 });
 
 //create firebase event for user input to database and add a row in html from user's entry
