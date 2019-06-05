@@ -74,13 +74,17 @@ database.ref().on("child_added", function(addChild){
     var train = addChild.val().train;
     var destination = addChild.val().destination;
     var freq = addChild.val().frequency;
-    var FTT = addVhild.val().firstTrainTime;
+    // var FTT = addVhild.val().firstTrainTime;
+    var NA = addChild.val().nextArrival;
+    var MA = addChild.val().minutesAway;
 
     //console.log train info
     console.log(train);
     console.log(destination);
     console.log(freq);
-    console.log(FTT);
+    // console.log(FTT);
+    console.log(NA);
+    console.log(MA);
 
     //prettify?
     // var FTTPretty = moment.unix(FTT).format("HH/mm");
