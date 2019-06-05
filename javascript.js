@@ -73,5 +73,12 @@ database.ref().on("child_added", function(addChild){
     console.log(freq);
     console.log(FTT);
 
+    //prettify?
+    // var FTTPretty = moment.unix(FTT).format("HH/mm");
+
+    // Calculate the frequency of trains using hardcore math to calculate the frequency of them coming into the station
+    var freq = moment().diff(moment(freq, "X"), "mins");
+    console.log(freq);
+
     
 })
