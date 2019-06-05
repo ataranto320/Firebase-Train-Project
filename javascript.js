@@ -101,8 +101,8 @@ database.ref().on("child_added", function(addChild){
         $('td').text(train),
         $('td').text(destination),
         $('td').text(freq),
-        // $('td').text(nextArrival),
-        // $('td').text(minutesAway)
+        $('td').text(nextArrival),
+        $('td').text(minutesAway)
     );
 
     //append new row to table
