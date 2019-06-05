@@ -67,5 +67,11 @@ database.ref().on("child_added", function(addChild){
     var freq = addChild.val().frequency;
     var FTT = addVhild.val().firstTrainTime;
 
+    //console.log train info
+    console.log(train);
+    console.log(destination);
+    console.log(freq);
+    console.log(FTT);
+
     
 })
