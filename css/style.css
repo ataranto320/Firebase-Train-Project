@@ -1,24 +1,20 @@
 .row{
-    position: center;
-}
-
-.container-fluid{
-    position: center;
-}
-
-.form{
-    position: center;
+    text-align: center;
 }
 
 thead{
-    position: center;
-}
-
-tbody{
-    position: center;
+    text-align: center;
 }
 
 body{
     background-image: url(https://d21xlh2maitm24.cloudfront.net/nyc/grand-central.jpg?mtime=20161027144807);
     background-size: cover;
+}
+
+h1{
+    color: yellowgreen;
+}
+
+h4{
+    color: yellowgreen;
 }
