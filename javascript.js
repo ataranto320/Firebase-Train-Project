@@ -16,7 +16,7 @@
 
 firebase.initializeApp(firebaseConfig);
 
-var database = firesbase.database();
+var database = firebase.database();
 
 //button to add trains to schedule
 $('train-input').on("click", function(event){
