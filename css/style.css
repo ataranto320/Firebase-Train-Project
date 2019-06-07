@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-thead{
+th{
     text-align: center;
 }
 
@@ -18,3 +18,23 @@ h1{
 h4{
     color: yellowgreen;
 }
+
+label{
+    color: yellowgreen;
+}
+
+/* #train-input{
+    color: yellowgreen;
+}
+
+#destination-input{
+    color: yellowgreen;
+}
+
+#FTT-input{
+    color: yellowgreen;
+}
+
+#freq-input{
+    color: yellowgreen;
+} */
