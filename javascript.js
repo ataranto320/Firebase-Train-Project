@@ -26,7 +26,7 @@ $('train-input').on("click", function(event){
     var train = $('train-input').val().trim();
     var destination = $('destination-input').val().trim();
     var freq = $('freq-input').val().trim();
-    // var firstTrainTime = $('FTT-input').val().trim();
+    var firstTrainTime = $('FTT-input').val().trim();
     var nextArrival = $('NA-input').val().trim();
     var minutesAway = $('MA-input').val().trim();
 
@@ -35,7 +35,7 @@ $('train-input').on("click", function(event){
         train: train,
         destination: destination,
         frequency: freq,
-        // firstTrainTime = FTT,
+        firstTrainTime = FTT,
         nextArrival: NA,
         minutesAway: MA
     };
@@ -47,7 +47,7 @@ $('train-input').on("click", function(event){
     console.log(userInput.train);
     console.log(userInput.destination);
     console.log(userInput.freq);
-    // console.log(userInput.FTT);
+    console.log(userInput.FTT);
     console.log(userInput.NA);
     console.log(userInput.MA);
 
@@ -57,7 +57,7 @@ $('train-input').on("click", function(event){
     $('train-input').val("");
     $('destination-input').val("");
     $('freq-input').val("");
-    // $('FTT-input').val("");
+    $('FTT-input').val("");
     $('NA-input').val("");
     $('MA-input').val("");
 });
@@ -70,7 +70,7 @@ database.ref().on("child_added", function(addChild){
     var train = addChild.val().train;
     var destination = addChild.val().destination;
     var freq = addChild.val().frequency;
-    // var FTT = addVhild.val().firstTrainTime;
+    var FTT = addVhild.val().firstTrainTime;
     var NA = addChild.val().nextArrival;
     var MA = addChild.val().minutesAway;
 
@@ -78,7 +78,7 @@ database.ref().on("child_added", function(addChild){
     console.log(train);
     console.log(destination);
     console.log(freq);
-    // console.log(FTT);
+    console.log(FTT);
     console.log(NA);
     console.log(MA);
 
@@ -91,6 +91,7 @@ database.ref().on("child_added", function(addChild){
 
     //calculate next arrival and minutes away
     //arrival time - current time = mins left?
+    // moment.js
 
     //create a new row
     var newRow = $('tr').append(
