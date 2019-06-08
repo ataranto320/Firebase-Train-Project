@@ -126,6 +126,10 @@ database.ref().on("child_added", function(addChild){
     var timeRemaining = timeDiff % tFreq;
     console.log(timeRemaining);
 
+    //minutes until next train
+    var timeTillTrain = tFreq - timeRemaining;
+    console.log("Minutes Until Train: " + timeTillTrain);
+
     //
 
 
