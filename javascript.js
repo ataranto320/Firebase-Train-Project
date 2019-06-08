@@ -104,6 +104,28 @@ database.ref().on("child_added", function(addChild){
         $('td').text(minutesAway)
     );
 
+    //assumption on frequency of train
+    var tFreq = 5;
+
+    //time of first train
+    var firstTrain = "5:00";
+
+    //first arrival
+    var firstArrival = moment(firstTrain, "HH:mm");
+    console.log(firstArrival);
+
+    //current time
+    var currentTime = moment();
+    console.log("Current Time: " + moment(currentTime).format("HH:mm"));
+
+    //time difference between trains
+    var timeDiff = moment().diff(moment(firstArrival), "minutes");
+    console.log("Difference In Time: " + timeDiff);
+
+    
+
+
+
     //append new row to table
     $("tbody").append(newRow);
 });
