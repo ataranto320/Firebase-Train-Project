@@ -63,16 +63,16 @@ $('train-input').on("click", function(event){
 });
 
 //create firebase event for user input to database and add a row in html from user's entry
-database.ref().on("child_added", function(addChild){
-    console.log(addChild.val());
+database.ref().on("child_added", function(childSnapshot){
+    console.log(childSnapshot.val());
 
     //store into variables
-    var train = addChild.val().train;
-    var destination = addChild.val().destination;
-    var freq = addChild.val().frequency;
-    var FTT = addVhild.val().firstTrainTime;
-    var NA = addChild.val().nextArrival;
-    var MA = addChild.val().minutesAway;
+    var train = childSnapshot.val().train;
+    var destination = childSnapshot.val().destination;
+    var freq = childSnapshot.val().frequency;
+    var FTT = childSnapshot.val().firstTrainTime;
+    var NA = childSnapshot.val().nextArrival;
+    var MA = childSnapshot.val().minutesAway;
 
     //console.log train info
     console.log(train);
