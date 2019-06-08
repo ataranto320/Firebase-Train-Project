@@ -122,7 +122,11 @@ database.ref().on("child_added", function(addChild){
     var timeDiff = moment().diff(moment(firstArrival), "minutes");
     console.log("Difference In Time: " + timeDiff);
 
-    
+    //time remaining 
+    var timeRemaining = timeDiff % tFreq;
+    console.log(timeRemaining);
+
+    //
 
 
 
