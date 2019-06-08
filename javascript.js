@@ -130,7 +130,9 @@ database.ref().on("child_added", function(addChild){
     var timeTillTrain = tFreq - timeRemaining;
     console.log("Minutes Until Train: " + timeTillTrain);
 
-    //
+    //next train
+    var nextTrain = moment().add(timeTillTrain, "minutes");
+    console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
 
 
 
