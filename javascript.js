@@ -92,6 +92,8 @@ database.ref().on("child_added", function(addChild){
     //calculate next arrival and minutes away
     //arrival time - current time = mins left?
     // moment.js
+    Date.now()
+    Math.floor(Date.now() / 1000)
 
     //create a new row
     var newRow = $('tr').append(
