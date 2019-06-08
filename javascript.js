@@ -35,7 +35,7 @@ $('train-input').on("click", function(event){
         train: train,
         destination: destination,
         frequency: freq,
-        firstTrainTime = FTT,
+        firstTrainTime: FTT,
         nextArrival: NA,
         minutesAway: MA
     };
@@ -133,8 +133,6 @@ database.ref().on("child_added", function(addChild){
     //next train
     var nextTrain = moment().add(timeTillTrain, "minutes");
     console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
-
-
 
     //append new row to table
     $("tbody").append(newRow);
