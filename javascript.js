@@ -135,5 +135,5 @@ database.ref().on("child_added", function(childSnapshot){
     console.log("Arrival Time: " + moment(nextTrain).format("HH:mm"));
 
     //append new row to table
-    $("#table > tbody").append(newRow);
+    $("#train-table > tbody").append(newRow);
 });
