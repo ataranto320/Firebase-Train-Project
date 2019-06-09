@@ -29,10 +29,16 @@ label{
 
 th{
     color: yellowgreen;
+    text-align: center;
 }
 
 td{
     color: yellowgreen;
+    text-align: center;
+}
+
+tr{
+    text-align: center;
 }
 
 /* #train-input{
