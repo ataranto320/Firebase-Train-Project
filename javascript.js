@@ -71,6 +71,11 @@ database.ref().on("child_added", function(childSnapshot){
     var destination = childSnapshot.val().destination;
     var freq = childSnapshot.val().frequency;
     var FTT = childSnapshot.val().firstTrainTime;
+    var arrival = FTT.split(":");
+    var trainTime = moment()
+    .hours(arrival[0])
+    .minutes(arrival[1]);
+    var trainMoment = moment.max(moment(), trainTime);
     var NA = childSnapshot.val().nextArrival;
     var MA = childSnapshot.val().minutesAway;
 
@@ -79,21 +84,23 @@ database.ref().on("child_added", function(childSnapshot){
     console.log(destination);
     console.log(freq);
     console.log(FTT);
+    console.log(trainTime);
+    console.log(trainMoment);
     console.log(NA);
     console.log(MA);
 
-    //prettify?
-    // var FTTPretty = moment.unix(FTT).format("HH/mm");
+    if (trainMoment === trainTime) {
+        NA = trainTime.format("hh:mm A");
+        MA = trainTime.diff(moment(), "minutes");
+    } else {
+        var diffTrains = moment().diff(trainTime, "minutes");
+        var RT = diffTrains % freq;
+        MA = freq - RT;
+        NA = moment().add(MA, "m").format("hh:mm A");
+    }
 
-    // Calculate the frequency of trains using hardcore math to calculate the frequency of them coming into the station
-    // var freq = moment().diff(moment(freq, "X"), "mins");
-    // console.log(freq);
-
-    //calculate next arrival and minutes away
-    //arrival time - current time = mins left?
-    // moment.js
-    // Date.now()
-    // Math.floor(Date.now() / 1000)
+    console.log("MA:", MA);
+    console.log("NA", NA);
 
     //create a new row
     var newRow = $('tr').append(
